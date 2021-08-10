@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Administratorlogin form</title>
+   <SCRIPT LANGUAGE="JavaScript"> 
+function isEmpty(str) {
+  if (str==null || str=="") 
+    return true; 
+  return false; 
+} 
+
+function validate(userName, password) {
+  if (isEmpty(userName)) {
+    alert('User name must have a value'); 
+    return false; 
+  } 
+  if (isEmpty(password)) {
+    alert('Password must have a value'); 
+    return false; 
+  } 
+  return true; 
+} 
+</SCRIPT> 
+<script language="javascript" src="./menu.js"></script>
+<script language="javascript" src="./menu_items.js"></script>
+<script language="javascript" src="./menu_tpl.js"></script>
+<script language="javascript">
+  new menu (MENU_ITEMS, MENU_POS, MENU_STYLES);
+</script>
+<style type="text/css">
+body {
+          background-image:  url('ricebk.jpg');
+          background-repeat: repeat;
+          background-position:  center 50%;
+          background-height:100px
+         
+          }
+
+</style>
+
+</head>
+
+<body>
+<center>
+        <form method="post" name="f" action="admvalid.jsp" onsubmit="return validate(this.uname.value, 
+        this.pwd.value);">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table><tr><td>Username:</td><td><input name="uname" type="text" size="25"></td></tr>
+        <tr><td>Password:</td><td><input name="pwd" type="password" size="25"></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Submit"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="clear"></td></tr>
+    </center>
+    </form>
+</body>
+</html>

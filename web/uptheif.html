@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+<title>Updating Theives Information</title>
+<script language="javascript" src="./menu.js"></script>
+<script language="javascript" src="./police_items.js"></script>
+<script language="javascript" src="./menu_tpl.js"></script>
+<script language="javascript">
+  new menu (MENU_ITEMS, MENU_POS, MENU_STYLES);
+</script>
+
+<style type="text/css">
+body {
+          background-image:  url('ricebk.jpg');
+          background-repeat: repeat;
+          background-position:  center 50%;
+          background-height:100px
+         
+          }
+
+</style>
+</head>
+
+<body><br><br>
+<center><b><u><h2>Add Thieves Information</h2> </u></b></center>
+    <form method="post" action="theifup.jsp">
+        <table align=center>
+            <tr><td>Name:</td>
+            <td><input type=text name=tname size=20></td></tr>
+            <tr><td>Alias:</td>
+            <td><input type=text name=aname size=20></td></tr>
+            <tr><td>Age:</td>
+            <td><input type=text name=ag size=20></td></tr>
+            <tr><td>Gender:</td>
+                <td>Male<input name="gen" type="radio" value="male">
+                    Female<input type="radio" name="gen" value="female">
+            </td></tr>
+            <tr><td>Thief's Id:</td>
+            <td><input name=id type=text size=20></td></tr>
+            <tr><td>Crimes committed:</td>
+            <td><textarea name="crimes" cols="25" rows="4"></textarea></td></tr>
+            <tr><td>Rewards:</td>
+            <td><input type=text name=rward size=20></td></tr>
+        </table><br>
+        <br>
+        <center><input type=submit value="Submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type=reset value="Clear  "></center>
+    </form>
+</body>
+
+</html>

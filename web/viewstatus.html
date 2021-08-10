@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<title>view status</title>
+    <script>
+function fun()
+{
+var no1=f.id.value;
+if(no1.length==0 )
+{
+alert("plz enter valid complaint id");
+f.id.focus();
+return false;
+}
+}
+    </script>
+<script language="javascript" src="./menu.js"></script>
+<script language="javascript" src="./user_items.js"></script>
+<script language="javascript" src="./menu_tpl.js"></script>
+<script language="javascript">
+  new menu (MENU_ITEMS, MENU_POS, MENU_STYLES);
+</script>
+
+<style type="text/css">
+body {
+          background-image:  url('ricebk.jpg');
+          background-repeat: repeat;
+          background-position:  center 50%;
+          background-height:100px
+         
+          }
+
+</style>
+</head>
+<body bgcolor="silver">
+    
+<br><br><br><center>
+<br>
+<form action="stat.jsp" name="f" method=post onsubmit="return fun()"><p>Complaint ID:<input type="text" name="id" size="25"></p>
+<p><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="submit" value="submit"></p>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Register</title>
+<script>
+function fun()
+{
+var no1=f.name.value;
+if(no1.length==0 )
+{
+alert("plz enter valid user name");
+f.name.focus();
+return false;
+}
+var no2=f.pwd.value;
+if(no2.length==0)
+{
+alert("plz enter  password");
+f.pwd.focus();
+return false;
+}
+var no3=f.age.value;
+if(no3.length==0 || no3<18)
+{
+alert("plz enter valid age");
+f.age.focus();
+return false;
+}
+var no5=f.address.value;
+if(no5.length==0 )
+{
+alert("plz enter valid address");
+f.address.focus();
+return false;
+}
+var no6=f.pno.value;
+if(no6.length==0)
+{
+alert("plz enter  valid phone number");
+f.pno.focus();
+return false;
+}
+var no7=f.mail.value;
+if(no7.length==0 )
+{
+alert("plz enter valid mail-id");
+f.mail.focus();
+return false;
+}
+
+var no8=f.puid.value;
+if(no8.length==0 )
+{
+alert("plz enter valid uid");
+f.mail.focus();
+return false;
+}
+}
+</script>
+<style type="text/css">
+body {
+          background-image:  url('ricebk.jpg');
+          background-repeat: repeat;
+          background-position:  center 50%;
+          background-height:100px
+         
+          }
+
+</style>
+<script language="javascript" src="./menu.js"></script>
+<script language="javascript" src="./menu_items.js"></script>
+<script language="javascript" src="./menu_tpl.js"></script>
+<script language="javascript">
+  new menu (MENU_ITEMS, MENU_POS, MENU_STYLES);
+</script>
+
+</head>
+<body>
+<br><br><br><br><br>
+    <form action="reg.jsp" method="post" name="f" onsubmit="return fun()">
+        <table align=center>
+           <tr><td>SSN:</td>
+            <td><input type=text size=20 name="puid"></td></tr>  
+            <tr><td>Name:</td>
+            <td><input type=text size=20 name="name"></td></tr>
+            <tr><td>Password:</td>
+            <td><input type=password size=20 name="pwd"></td></tr>
+            <tr><td>Age:</td>
+            <td><input type=text size=20 name="age"></td></tr>
+            <tr><td>Gender:</td>
+                <td><select name="gender"><option>Male <option>Female
+            </select></td></tr>
+            <tr><td>Address:</td>
+            <td><textarea name="address" cols="25" rows="4"></textarea></td></tr>
+            <tr><td>Telephone No:</td>
+            <td><input type=text size=20 name="pno"></td></tr>
+            <tr><td>Email:</td>
+            <td><input type=text size=20 name="mail"></td></tr>
+        </table><br>
+        <br>
+        <center><input type=submit value="Submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type=reset value="Clear"></center>
+    </form>
+</body>
+</html>
